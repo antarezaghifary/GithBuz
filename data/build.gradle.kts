@@ -1,17 +1,17 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hilt.android)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.room)
+    id("com.android.library")
+    id("kotlin-android")
+    id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
-    namespace = "com.azer.data"
-    compileSdk = 36
+    namespace = "com.githbuz.data"
+    compileSdk = 33
 
     defaultConfig {
         minSdk = 24
+        targetSdk = 33
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -27,34 +27,33 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "21"
+        jvmTarget = "1.8"
     }
 }
 
 dependencies {
-
-    implementation(project(":domain"))
     implementation(project(":core"))
+    implementation(project(":domain"))
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    ksp("com.google.dagger:hilt-android-compiler:2.44")
 
-    implementation(libs.room.runtime)
-    implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-}
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
-room {
-    schemaDirectory("$projectDir/schemas")
+    // Room
+    implementation("androidx.room:room-runtime:2.5.0")
+    implementation("androidx.room:room-ktx:2.5.0")
+    ksp("androidx.room:room-compiler:2.5.0")
 }

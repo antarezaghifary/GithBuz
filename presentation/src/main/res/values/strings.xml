@@ -1,4 +1,5 @@
 <resources>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">GithBuz</string>
+    <string name="search_hint">Search for a user</string>
+    <string name="empty_favorite_users">No favorite users yet.</string>
 </resources>
