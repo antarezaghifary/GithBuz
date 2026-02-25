@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.githbuz.presentation.databinding.FragmentSearchBinding
+import com.azer.presentation.databinding.FragmentSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,8 +21,8 @@ class SearchFragment : Fragment() {
     private val userAdapter by lazy {
         UserAdapter(
             onItemClick = { user ->
-                val action = SearchFragmentDirections.actionSearchFragmentToDetailFragment(user.login)
-                findNavController().navigate(action)
+//                val action = SearchFragmentDirections.actionSearchFragmentToDetailFragment(user.login)
+//                findNavController().navigate(action)
             },
             onFavoriteClick = { user ->
                 viewModel.setFavorite(user)

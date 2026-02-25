@@ -21,6 +21,7 @@ compose-compiler = "1.5.14"
 activity-compose = "1.9.1"
 compose-bom = "2024.06.00"
 javaxInject = "1"
+glide = "4.16.0"
 
 
 [libraries]
@@ -67,6 +68,10 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+# Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
 
 
 [plugins]

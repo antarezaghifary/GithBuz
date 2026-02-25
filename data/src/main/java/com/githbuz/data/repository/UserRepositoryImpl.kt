@@ -1,5 +1,6 @@
 package com.githbuz.data.repository
 
+import com.githbuz.data.mapper.UserMapper
 import com.githbuz.data.source.local.UserDao
 import com.githbuz.data.source.remote.ApiService
 import com.githbuz.domain.model.User

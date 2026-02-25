@@ -5,10 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.azer.presentation.databinding.ItemUserBinding
 import com.bumptech.glide.Glide
 import com.githbuz.domain.model.User
-import com.githbuz.presentation.R
-import com.githbuz.presentation.databinding.ItemUserBinding
 
 class UserAdapter(
     private val onItemClick: (User) -> Unit,
