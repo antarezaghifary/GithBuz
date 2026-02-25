@@ -41,6 +41,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation(libs.javax.inject)
     implementation(libs.kotlinx.coroutines.core)
 
     // Serialization
