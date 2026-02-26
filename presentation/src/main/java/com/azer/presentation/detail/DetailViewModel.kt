@@ -8,11 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-sealed class DetailUiState {
-    object Loading : DetailUiState()
-    data class Success(val user: User) : DetailUiState()
-    data class Error(val message: String) : DetailUiState()
-}
+
 
 sealed class DetailUiEvent
 

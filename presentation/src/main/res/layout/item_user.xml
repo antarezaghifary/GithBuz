@@ -21,7 +21,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_top_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
             tools:src="@tools:sample/avatars" />
 
@@ -34,7 +34,7 @@
             app:layout_constraintBottom_toTopOf="@id/tvUrl"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivAvatar"
-            app:layout_top_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Username" />
 
         <TextView
@@ -47,7 +47,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ivAvatar"
-            app:layout_top_toBottomOf="@id/tvUsername"
+            app:layout_constraintTop_toBottomOf="@id/tvUsername"
             tools:text="https://github.com/username" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

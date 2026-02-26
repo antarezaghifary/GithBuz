@@ -15,7 +15,7 @@
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_top_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@android:drawable/ic_menu_search">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -39,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_top_toBottomOf="@id/tilSearch"
+        app:layout_constraintTop_toBottomOf="@id/tilSearch"
         tools:listitem="@layout/item_user" />
 
     <ProgressBar
@@ -50,7 +50,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_top_toBottomOf="@id/tilSearch" />
+        app:layout_constraintTop_toBottomOf="@id/tilSearch" />
 
     <TextView
         android:id="@+id/tvEmpty"
@@ -61,6 +61,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_top_toBottomOf="@id/tilSearch" />
+        app:layout_constraintTop_toBottomOf="@id/tilSearch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
